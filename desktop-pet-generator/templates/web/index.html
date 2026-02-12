@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>{{PET_NAME}} - 桌面宠物</title>
     <style>
         body {
@@ -184,6 +187,7 @@
         const petSprite = document.getElementById('pet-sprite');
 
         let isDragging = false;
+        let hasMoved = false; // 跟踪是否真的拖拽过
         let isWalking = false;
         let currentX;
         let currentY;
@@ -237,17 +241,14 @@
 
             if (e.target === pet || pet.contains(e.target)) {
                 isDragging = true;
-                isWalking = true;
-
-                // 拖拽时触发 walk 动画
-                if (animations && animations.walk) {
-                    switchAnimation('walk');
-                }
+                hasMoved = false; // 重置移动标记
 
                 // 开始长按检测
                 pressTimer = setTimeout(() => {
-                    triggerAnimation('pet');
-                    showHearts();
+                    if (!hasMoved) { // 只有在没移动时才触发长按
+                        triggerAnimation('pet');
+                        showHearts();
+                    }
                 }, 2000);
             }
 
@@ -257,12 +258,19 @@
         function drag(e) {
             if (isDragging) {
                 e.preventDefault();
+                hasMoved = true; // 标记已经移动
                 currentX = e.clientX - initialX;
                 currentY = e.clientY - initialY;
                 xOffset = currentX;
                 yOffset = currentY;
 
                 setTranslate(currentX, currentY, pet);
+
+                // 开始拖拽走路动画
+                if (!isWalking && animations && animations.walk) {
+                    isWalking = true;
+                    switchAnimation('walk');
+                }
             }
         }
 
@@ -283,9 +291,11 @@
                 }
             }
 
+            // 使用 setTimeout 确保 click 事件能正确判断
             setTimeout(() => {
                 isDragging = false;
-            }, 100);
+                hasMoved = false;
+            }, 10);
 
             resetIdleTimer();
         }
@@ -297,6 +307,14 @@
 
         // 点击和双击处理
         pet.addEventListener('click', function(e) {
+            // 清除长按计时器，防止点击时触发长按
+            if (pressTimer) {
+                clearTimeout(pressTimer);
+                pressTimer = null;
+            }
+
+            // 如果刚刚拖拽过，忽略点击
+            if (hasMoved) return;
             if (isDragging) return;
 
             clickCount++;
