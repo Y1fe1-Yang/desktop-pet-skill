@@ -1,0 +1,547 @@
+{
+  "presets": [
+    {
+      "id": "cute",
+      "name": "可爱型",
+      "description": "适合可爱风格的桌宠，动作柔和温馨",
+      "theme": "adorable",
+      "animations": {
+        "idle": {
+          "id": "idle",
+          "duration": "3s",
+          "effects": ["pet-effect-glow"]
+        },
+        "onHover": {
+          "id": "hover",
+          "duration": "2s",
+          "effects": []
+        },
+        "onClick": {
+          "id": "click",
+          "duration": "0.3s",
+          "followUp": "heartbeat"
+        },
+        "working": {
+          "id": "excited",
+          "duration": "0.6s",
+          "effects": []
+        },
+        "completed": {
+          "id": "completed",
+          "duration": "2s",
+          "effects": ["pet-effect-glow"]
+        },
+        "greeting": {
+          "id": "wave",
+          "duration": "1s",
+          "effects": []
+        }
+      },
+      "colorScheme": {
+        "primary": "#FFB6C1",
+        "secondary": "#FFC0CB",
+        "accent": "#FF69B4"
+      }
+    },
+    {
+      "id": "professional",
+      "name": "专业型",
+      "description": "适合工作场景，动作简洁高效",
+      "theme": "business",
+      "animations": {
+        "idle": {
+          "id": "idle",
+          "duration": "4s",
+          "effects": []
+        },
+        "onHover": {
+          "id": "hover",
+          "duration": "2.5s",
+          "effects": []
+        },
+        "onClick": {
+          "id": "click",
+          "duration": "0.2s",
+          "followUp": null
+        },
+        "working": {
+          "id": "working",
+          "duration": "1.5s",
+          "effects": []
+        },
+        "completed": {
+          "id": "spin",
+          "duration": "1s",
+          "effects": []
+        },
+        "error": {
+          "id": "error",
+          "duration": "0.5s",
+          "effects": []
+        }
+      },
+      "colorScheme": {
+        "primary": "#4A90E2",
+        "secondary": "#5BA3F5",
+        "accent": "#2E5C8A"
+      }
+    },
+    {
+      "id": "energetic",
+      "name": "活泼型",
+      "description": "充满活力，动作快速有趣",
+      "theme": "playful",
+      "animations": {
+        "idle": {
+          "id": "excited",
+          "duration": "0.6s",
+          "effects": []
+        },
+        "onHover": {
+          "id": "wiggle",
+          "duration": "0.8s",
+          "effects": []
+        },
+        "onClick": {
+          "id": "spin",
+          "duration": "0.8s",
+          "followUp": "excited"
+        },
+        "working": {
+          "id": "excited",
+          "duration": "0.5s",
+          "effects": ["pet-effect-rainbow"]
+        },
+        "completed": {
+          "id": "completed",
+          "duration": "1.5s",
+          "effects": ["pet-effect-rainbow", "pet-effect-glow"]
+        },
+        "greeting": {
+          "id": "wave",
+          "duration": "0.8s",
+          "effects": []
+        }
+      },
+      "colorScheme": {
+        "primary": "#FF6B35",
+        "secondary": "#FFD23F",
+        "accent": "#EE4266"
+      }
+    },
+    {
+      "id": "calm",
+      "name": "平静型",
+      "description": "动作缓慢舒缓，适合放松场景",
+      "theme": "zen",
+      "animations": {
+        "idle": {
+          "id": "sleep",
+          "duration": "4s",
+          "effects": ["pet-effect-fade"]
+        },
+        "onHover": {
+          "id": "hover",
+          "duration": "3s",
+          "effects": []
+        },
+        "onClick": {
+          "id": "click",
+          "duration": "0.5s",
+          "followUp": null
+        },
+        "working": {
+          "id": "thinking",
+          "duration": "3s",
+          "effects": []
+        },
+        "completed": {
+          "id": "wave",
+          "duration": "1.5s",
+          "effects": []
+        },
+        "sleep": {
+          "id": "sleep",
+          "duration": "4s",
+          "effects": ["pet-effect-blur", "pet-effect-fade"]
+        }
+      },
+      "colorScheme": {
+        "primary": "#B8E6D5",
+        "secondary": "#A8DFD0",
+        "accent": "#6FB89D"
+      }
+    },
+    {
+      "id": "mysterious",
+      "name": "神秘型",
+      "description": "神秘优雅的动作风格",
+      "theme": "enigmatic",
+      "animations": {
+        "idle": {
+          "id": "thinking",
+          "duration": "3s",
+          "effects": ["pet-effect-glow"]
+        },
+        "onHover": {
+          "id": "hover",
+          "duration": "2s",
+          "effects": ["pet-effect-glow"]
+        },
+        "onClick": {
+          "id": "spin",
+          "duration": "1.2s",
+          "followUp": "thinking"
+        },
+        "working": {
+          "id": "thinking",
+          "duration": "2.5s",
+          "effects": ["pet-effect-fade"]
+        },
+        "completed": {
+          "id": "spin",
+          "duration": "1s",
+          "effects": ["pet-effect-rainbow"]
+        }
+      },
+      "colorScheme": {
+        "primary": "#9B59B6",
+        "secondary": "#8E44AD",
+        "accent": "#6C3483"
+      }
+    },
+    {
+      "id": "party",
+      "name": "派对型",
+      "description": "欢乐派对氛围，充满庆祝感",
+      "theme": "celebration",
+      "animations": {
+        "idle": {
+          "id": "heartbeat",
+          "duration": "1.2s",
+          "effects": ["pet-effect-rainbow"]
+        },
+        "onHover": {
+          "id": "wiggle",
+          "duration": "0.6s",
+          "effects": ["pet-effect-glow"]
+        },
+        "onClick": {
+          "id": "spin",
+          "duration": "0.8s",
+          "followUp": "excited"
+        },
+        "working": {
+          "id": "excited",
+          "duration": "0.5s",
+          "effects": ["pet-effect-rainbow"]
+        },
+        "completed": {
+          "id": "completed",
+          "duration": "2s",
+          "effects": ["pet-effect-rainbow", "pet-effect-glow"]
+        },
+        "greeting": {
+          "id": "wave",
+          "duration": "0.8s",
+          "effects": ["pet-effect-rainbow"]
+        }
+      },
+      "colorScheme": {
+        "primary": "#F39C12",
+        "secondary": "#E74C3C",
+        "accent": "#9B59B6"
+      }
+    },
+    {
+      "id": "minimal",
+      "name": "极简型",
+      "description": "最小化动画，适合注重性能的场景",
+      "theme": "minimalist",
+      "animations": {
+        "idle": {
+          "id": "idle",
+          "duration": "5s",
+          "effects": []
+        },
+        "onHover": {
+          "id": "hover",
+          "duration": "2s",
+          "effects": []
+        },
+        "onClick": {
+          "id": "click",
+          "duration": "0.2s",
+          "followUp": null
+        },
+        "working": {
+          "id": "working",
+          "duration": "2s",
+          "effects": []
+        },
+        "completed": {
+          "id": "click",
+          "duration": "0.3s",
+          "effects": []
+        }
+      },
+      "colorScheme": {
+        "primary": "#95A5A6",
+        "secondary": "#BDC3C7",
+        "accent": "#7F8C8D"
+      }
+    },
+    {
+      "id": "robotic",
+      "name": "机械型",
+      "description": "机械感十足，动作精确",
+      "theme": "tech",
+      "animations": {
+        "idle": {
+          "id": "working",
+          "duration": "1s",
+          "effects": []
+        },
+        "onHover": {
+          "id": "thinking",
+          "duration": "2s",
+          "effects": ["pet-effect-glow"]
+        },
+        "onClick": {
+          "id": "spin",
+          "duration": "0.6s",
+          "followUp": "working"
+        },
+        "working": {
+          "id": "working",
+          "duration": "1s",
+          "effects": ["pet-effect-glow"]
+        },
+        "completed": {
+          "id": "spin",
+          "duration": "1s",
+          "effects": []
+        },
+        "error": {
+          "id": "error",
+          "duration": "0.4s",
+          "effects": []
+        }
+      },
+      "colorScheme": {
+        "primary": "#34495E",
+        "secondary": "#2C3E50",
+        "accent": "#1ABC9C"
+      }
+    }
+  ],
+  "combos": [
+    {
+      "id": "morning-routine",
+      "name": "早晨问候组合",
+      "description": "早晨启动时的动画序列",
+      "sequence": [
+        {
+          "animation": "sleep",
+          "duration": "2s",
+          "delay": 0
+        },
+        {
+          "animation": "excited",
+          "duration": "1s",
+          "delay": 0.5
+        },
+        {
+          "animation": "wave",
+          "duration": "1s",
+          "delay": 0.2
+        },
+        {
+          "animation": "idle",
+          "duration": "infinite",
+          "delay": 0
+        }
+      ]
+    },
+    {
+      "id": "work-complete",
+      "name": "工作完成组合",
+      "description": "任务完成时的庆祝动画序列",
+      "sequence": [
+        {
+          "animation": "completed",
+          "duration": "2s",
+          "delay": 0
+        },
+        {
+          "animation": "spin",
+          "duration": "1s",
+          "delay": 0.3
+        },
+        {
+          "animation": "heartbeat",
+          "duration": "1.5s",
+          "delay": 0.5
+        },
+        {
+          "animation": "idle",
+          "duration": "infinite",
+          "delay": 0
+        }
+      ]
+    },
+    {
+      "id": "error-recovery",
+      "name": "错误恢复组合",
+      "description": "错误发生后的恢复动画序列",
+      "sequence": [
+        {
+          "animation": "error",
+          "duration": "1.5s",
+          "delay": 0
+        },
+        {
+          "animation": "thinking",
+          "duration": "2s",
+          "delay": 0.5
+        },
+        {
+          "animation": "wave",
+          "duration": "1s",
+          "delay": 0.3
+        },
+        {
+          "animation": "idle",
+          "duration": "infinite",
+          "delay": 0
+        }
+      ]
+    },
+    {
+      "id": "attention-seeking",
+      "name": "吸引注意组合",
+      "description": "需要用户注意时的动画序列",
+      "sequence": [
+        {
+          "animation": "excited",
+          "duration": "0.6s",
+          "delay": 0
+        },
+        {
+          "animation": "wave",
+          "duration": "1s",
+          "delay": 0.2
+        },
+        {
+          "animation": "wiggle",
+          "duration": "0.8s",
+          "delay": 0.3
+        },
+        {
+          "animation": "heartbeat",
+          "duration": "1.5s",
+          "delay": 0.5
+        }
+      ]
+    },
+    {
+      "id": "goodnight",
+      "name": "晚安组合",
+      "description": "进入睡眠模式的动画序列",
+      "sequence": [
+        {
+          "animation": "wave",
+          "duration": "1s",
+          "delay": 0
+        },
+        {
+          "animation": "thinking",
+          "duration": "2s",
+          "delay": 0.5
+        },
+        {
+          "animation": "sleep",
+          "duration": "infinite",
+          "delay": 1
+        }
+      ]
+    }
+  ],
+  "triggers": [
+    {
+      "id": "time-based",
+      "name": "时间触发器",
+      "rules": [
+        {
+          "condition": "hour >= 6 && hour < 12",
+          "preset": "energetic",
+          "combo": "morning-routine"
+        },
+        {
+          "condition": "hour >= 12 && hour < 18",
+          "preset": "professional",
+          "combo": null
+        },
+        {
+          "condition": "hour >= 18 && hour < 22",
+          "preset": "calm",
+          "combo": null
+        },
+        {
+          "condition": "hour >= 22 || hour < 6",
+          "preset": "calm",
+          "combo": "goodnight"
+        }
+      ]
+    },
+    {
+      "id": "interaction-based",
+      "name": "交互触发器",
+      "rules": [
+        {
+          "condition": "idle_time > 300",
+          "animation": "sleep",
+          "message": "主人去哪了？"
+        },
+        {
+          "condition": "click_count > 5",
+          "animation": "excited",
+          "message": "好开心！"
+        },
+        {
+          "condition": "drag_duration > 10",
+          "animation": "wiggle",
+          "message": "好晕啊~"
+        }
+      ]
+    },
+    {
+      "id": "status-based",
+      "name": "状态触发器",
+      "rules": [
+        {
+          "condition": "cpu_usage > 80",
+          "animation": "working",
+          "message": "电脑好累..."
+        },
+        {
+          "condition": "battery < 20",
+          "animation": "sleep",
+          "message": "快没电了"
+        },
+        {
+          "condition": "notification_received",
+          "animation": "excited",
+          "combo": "attention-seeking"
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "version": "1.0.0",
+    "total_presets": 8,
+    "total_combos": 5,
+    "total_triggers": 3,
+    "compatible_with": "animations.json v1.0.0"
+  }
+}

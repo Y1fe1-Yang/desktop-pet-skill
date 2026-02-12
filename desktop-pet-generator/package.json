@@ -1,0 +1,34 @@
+{
+  "name": "desktop-pet-generator",
+  "version": "1.0.0",
+  "description": "Generate customizable desktop pets from images with animations and interactions",
+  "main": "scripts/pet_generator.py",
+  "scripts": {
+    "test": "python -m pytest tests/",
+    "analyze": "python scripts/image_analyzer.py",
+    "build": "python scripts/pet_generator.py",
+    "setup": "pip install -r requirements.txt"
+  },
+  "keywords": [
+    "desktop-pet",
+    "animation",
+    "css",
+    "sprite",
+    "interactive",
+    "generator"
+  ],
+  "author": "Desktop Pet Generator Team",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^28.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/desktop-pet-generator"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/desktop-pet-generator/issues"
+  },
+  "homepage": "https://github.com/yourusername/desktop-pet-generator#readme"
+}

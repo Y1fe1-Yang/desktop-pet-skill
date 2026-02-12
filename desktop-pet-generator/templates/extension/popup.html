@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{PET_NAME}} 控制面板</title>
+    <style>
+        body {
+            width: 300px;
+            padding: 15px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        h2 {
+            margin: 0 0 15px 0;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .section h3 {
+            margin: 0 0 10px 0;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: none;
+            border-radius: 6px;
+            background: white;
+            color: #667eea;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .toggle-button {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .toggle-button.off {
+            background: #f44336;
+        }
+
+        .status {
+            text-align: center;
+            padding: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 6px;
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+
+        .status.active {
+            background: rgba(76, 175, 80, 0.3);
+        }
+
+        .settings-group {
+            margin: 10px 0;
+        }
+
+        .settings-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 13px;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            margin: 5px 0;
+        }
+
+        .value-display {
+            text-align: right;
+            font-size: 12px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <h2>{{PET_NAME}} 控制中心</h2>
+
+    <div class="status" id="status">
+        宠物状态: 未激活
+    </div>
+
+    <div class="section">
+        <h3>基础控制</h3>
+        <button id="togglePet" class="toggle-button">启用宠物</button>
+        <button id="resetPosition">重置位置</button>
+    </div>
+
+    <div class="section">
+        <h3>动画控制</h3>
+        <button id="idleAnim">待机</button>
+        <button id="walkAnim">走路</button>
+        <button id="jumpAnim">跳跃</button>
+        <button id="sleepAnim">睡觉</button>
+    </div>
+
+    <div class="section">
+        <h3>设置</h3>
+        <div class="settings-group">
+            <label>宠物大小</label>
+            <input type="range" id="sizeSlider" min="50" max="200" value="100">
+            <div class="value-display" id="sizeValue">100%</div>
+        </div>
+        <div class="settings-group">
+            <label>移动速度</label>
+            <input type="range" id="speedSlider" min="1" max="10" value="5">
+            <div class="value-display" id="speedValue">5</div>
+        </div>
+        <div class="settings-group">
+            <label>自动动画间隔 (秒)</label>
+            <input type="range" id="intervalSlider" min="3" max="30" value="10">
+            <div class="value-display" id="intervalValue">10s</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>关于</h3>
+        <p style="font-size: 12px; margin: 5px 0; opacity: 0.9;">
+            版本: 1.0.0<br>
+            由桌面宠物生成器创建
+        </p>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{
+  "mode": "sprite",
+  "image_path": "/path/to/your/sprite-sheet.png",
+  "size": "300px",
+  "position": "bottom-left",
+  "animations": [
+    "idle_sprite",
+    "walk_sprite",
+    "jump_sprite",
+    "attack_sprite"
+  ],
+  "interactions": [
+    "clickable",
+    "draggable",
+    "hoverable",
+    "status_aware"
+  ],
+  "speed": "fast",
+  "personality": {
+    "name": "CodeMaster",
+    "trait": "energetic"
+  },
+  "deployment": "electron",
+  "output_dir": "./output/advanced-pet",
+  "advanced": {
+    "auto_roam": true,
+    "status_aware": true,
+    "sound_effects": true,
+    "particle_effects": true
+  }
+}

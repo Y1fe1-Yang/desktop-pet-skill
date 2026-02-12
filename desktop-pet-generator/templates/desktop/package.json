@@ -1,0 +1,74 @@
+{
+  "name": "{{PET_NAME}}-desktop",
+  "version": "1.0.0",
+  "description": "{{PET_NAME}} 桌面宠物应用",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "build:mac": "electron-builder --mac",
+    "build:win": "electron-builder --win",
+    "build:linux": "electron-builder --linux",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "keywords": [
+    "desktop-pet",
+    "electron",
+    "cute",
+    "widget"
+  ],
+  "author": "Desktop Pet Generator",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1"
+  },
+  "dependencies": {},
+  "build": {
+    "appId": "com.desktoppet.{{PET_NAME}}",
+    "productName": "{{PET_NAME}}",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "renderer.js",
+      "index.html",
+      "sprite*.png",
+      "animations.json",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "sprite*.png",
+        "to": "."
+      },
+      {
+        "from": "animations.json",
+        "to": ".",
+        "filter": ["**/*"]
+      }
+    ],
+    "mac": {
+      "category": "public.app-category.entertainment",
+      "target": [
+        "dir"
+      ]
+    },
+    "win": {
+      "target": [
+        "portable"
+      ]
+    },
+    "linux": {
+      "target": [
+        "dir"
+      ],
+      "category": "Utility"
+    },
+    "portable": {
+      "artifactName": "${productName}-${version}-portable.${ext}"
+    }
+  }
+}

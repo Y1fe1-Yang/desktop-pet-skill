@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{PET_NAME}} - Desktop Pet</title>
+    <link rel="stylesheet" href="pet.css">
+    <style>
+        /* Inline customization options */
+        :root {
+            --pet-size: {{PET_SIZE}};
+            --animation-speed: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="pet-container">
+        <img src="assets/pet.png"
+             alt="{{PET_NAME}}"
+             class="pet"
+             id="pet"
+             draggable="false">
+    </div>
+
+    <!-- Optional UI Controls -->
+    <div class="controls" style="display: none;">
+        <button onclick="toggleAnimation()">Pause/Play</button>
+        <button onclick="changePosition()">Move</button>
+    </div>
+
+    <script src="pet.js"></script>
+</body>
+</html>

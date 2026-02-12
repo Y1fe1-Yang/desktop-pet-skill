@@ -1,0 +1,178 @@
+{
+  "animations": [
+    {
+      "id": "idle",
+      "name": "Idle",
+      "description": "轻微晃动和眨眼，适合待机状态",
+      "css_class": "pet-anim-idle",
+      "keyframes": "idle-bounce",
+      "duration": "3s",
+      "timing": "ease-in-out",
+      "iteration": "infinite",
+      "category": "basic",
+      "intensity": "low"
+    },
+    {
+      "id": "working",
+      "name": "Working",
+      "description": "跳动和旋转，表示工作进行中",
+      "css_class": "pet-anim-working",
+      "keyframes": "working-pulse",
+      "duration": "1.5s",
+      "timing": "ease-in-out",
+      "iteration": "infinite",
+      "category": "status",
+      "intensity": "medium"
+    },
+    {
+      "id": "completed",
+      "name": "Completed",
+      "description": "庆祝动画，跳跃和旋转",
+      "css_class": "pet-anim-completed",
+      "keyframes": "completed-celebrate",
+      "duration": "2s",
+      "timing": "cubic-bezier(0.68, -0.55, 0.265, 1.55)",
+      "iteration": "2",
+      "category": "status",
+      "intensity": "high"
+    },
+    {
+      "id": "error",
+      "name": "Error",
+      "description": "快速抖动和颜色变化，表示错误",
+      "css_class": "pet-anim-error",
+      "keyframes": "error-shake",
+      "duration": "0.5s",
+      "timing": "ease-in-out",
+      "iteration": "3",
+      "category": "status",
+      "intensity": "high"
+    },
+    {
+      "id": "click",
+      "name": "Click",
+      "description": "点击时放大和旋转效果",
+      "css_class": "pet-anim-click",
+      "keyframes": "click-scale",
+      "duration": "0.3s",
+      "timing": "cubic-bezier(0.175, 0.885, 0.32, 1.275)",
+      "iteration": "1",
+      "category": "interaction",
+      "intensity": "medium"
+    },
+    {
+      "id": "hover",
+      "name": "Hover",
+      "description": "悬停时轻微漂浮和发光",
+      "css_class": "pet-anim-hover",
+      "keyframes": "hover-float",
+      "duration": "2s",
+      "timing": "ease-in-out",
+      "iteration": "infinite",
+      "category": "interaction",
+      "intensity": "low"
+    },
+    {
+      "id": "drag",
+      "name": "Drag",
+      "description": "拖拽时的跟随效果和倾斜",
+      "css_class": "pet-anim-drag",
+      "keyframes": "drag-tilt",
+      "duration": "0.2s",
+      "timing": "ease-out",
+      "iteration": "infinite",
+      "category": "interaction",
+      "intensity": "low"
+    },
+    {
+      "id": "sleep",
+      "name": "Sleep",
+      "description": "睡眠状态，缓慢呼吸效果",
+      "css_class": "pet-anim-sleep",
+      "keyframes": "sleep-breathe",
+      "duration": "4s",
+      "timing": "ease-in-out",
+      "iteration": "infinite",
+      "category": "mood",
+      "intensity": "low"
+    },
+    {
+      "id": "excited",
+      "name": "Excited",
+      "description": "快速跳动和放大，表示兴奋",
+      "css_class": "pet-anim-excited",
+      "keyframes": "excited-bounce",
+      "duration": "0.6s",
+      "timing": "cubic-bezier(0.68, -0.55, 0.265, 1.55)",
+      "iteration": "infinite",
+      "category": "mood",
+      "intensity": "high"
+    },
+    {
+      "id": "thinking",
+      "name": "Thinking",
+      "description": "思考状态，缓慢转圈",
+      "css_class": "pet-anim-thinking",
+      "keyframes": "thinking-rotate",
+      "duration": "3s",
+      "timing": "linear",
+      "iteration": "infinite",
+      "category": "mood",
+      "intensity": "medium"
+    },
+    {
+      "id": "wave",
+      "name": "Wave",
+      "description": "摇摆动画，左右摆动",
+      "css_class": "pet-anim-wave",
+      "keyframes": "wave-swing",
+      "duration": "1s",
+      "timing": "ease-in-out",
+      "iteration": "3",
+      "category": "greeting",
+      "intensity": "medium"
+    },
+    {
+      "id": "spin",
+      "name": "Spin",
+      "description": "快速旋转360度",
+      "css_class": "pet-anim-spin",
+      "keyframes": "spin-360",
+      "duration": "1s",
+      "timing": "ease-in-out",
+      "iteration": "1",
+      "category": "fun",
+      "intensity": "high"
+    },
+    {
+      "id": "heartbeat",
+      "name": "Heartbeat",
+      "description": "心跳效果，有节奏的缩放",
+      "css_class": "pet-anim-heartbeat",
+      "keyframes": "heartbeat-pulse",
+      "duration": "1.5s",
+      "timing": "ease-in-out",
+      "iteration": "infinite",
+      "category": "mood",
+      "intensity": "medium"
+    },
+    {
+      "id": "wiggle",
+      "name": "Wiggle",
+      "description": "扭动效果，来回摆动",
+      "css_class": "pet-anim-wiggle",
+      "keyframes": "wiggle-shake",
+      "duration": "0.8s",
+      "timing": "ease-in-out",
+      "iteration": "2",
+      "category": "fun",
+      "intensity": "medium"
+    }
+  ],
+  "meta": {
+    "version": "1.0.0",
+    "total_animations": 14,
+    "categories": ["basic", "status", "interaction", "mood", "greeting", "fun"],
+    "intensity_levels": ["low", "medium", "high"]
+  }
+}

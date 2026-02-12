@@ -1,0 +1,28 @@
+{
+  "mode": "css",
+  "image_path": "/path/to/your/pet-image.png",
+  "size": "200px",
+  "position": "bottom-right",
+  "animations": [
+    "float",
+    "walk",
+    "onClick"
+  ],
+  "interactions": [
+    "clickable",
+    "draggable"
+  ],
+  "speed": "medium",
+  "personality": {
+    "name": "Buddy",
+    "trait": "playful"
+  },
+  "deployment": "html",
+  "output_dir": "./output/simple-pet",
+  "advanced": {
+    "auto_roam": false,
+    "status_aware": false,
+    "sound_effects": false,
+    "particle_effects": false
+  }
+}

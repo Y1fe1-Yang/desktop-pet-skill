@@ -1,0 +1,727 @@
+{
+  "presets": {
+    "basic": {
+      "name": "基础互动",
+      "description": "简单的点击和拖拽互动",
+      "interactions": [
+        {
+          "name": "click_bounce",
+          "trigger": "click",
+          "action": "bounce",
+          "effect": {
+            "type": "bounce",
+            "duration": 400,
+            "easing": "ease-out",
+            "params": {}
+          },
+          "sound": {
+            "enabled": true,
+            "file": "sounds/click.mp3",
+            "volume": 0.5
+          },
+          "feedback": {
+            "visual": true,
+            "audio": false,
+            "haptic": false,
+            "message": "宠物很开心!"
+          },
+          "params": {},
+          "enabled": true
+        },
+        {
+          "name": "drag_move",
+          "trigger": "drag",
+          "action": "movePosition",
+          "effect": {
+            "type": "none",
+            "duration": 0,
+            "easing": "linear",
+            "params": {}
+          },
+          "sound": {
+            "enabled": false,
+            "file": null,
+            "volume": 1.0
+          },
+          "feedback": {
+            "visual": false,
+            "audio": false,
+            "haptic": false,
+            "message": null
+          },
+          "params": {},
+          "enabled": true
+        }
+      ]
+    },
+    "playful": {
+      "name": "活泼互动",
+      "description": "丰富的互动效果，适合活泼的宠物",
+      "interactions": [
+        {
+          "name": "click_bounce",
+          "trigger": "click",
+          "action": "bounce",
+          "effect": {
+            "type": "bounce",
+            "duration": 400,
+            "easing": "ease-out",
+            "params": {}
+          },
+          "sound": {
+            "enabled": true,
+            "file": "sounds/click.mp3",
+            "volume": 0.6
+          },
+          "feedback": {
+            "visual": true,
+            "audio": true,
+            "haptic": false,
+            "message": "哇!"
+          },
+          "params": {},
+          "enabled": true
+        },
+        {
+          "name": "doubleclick_spin",
+          "trigger": "dblclick",
+          "action": "spin",
+          "effect": {
+            "type": "rotate",
+            "duration": 500,
+            "easing": "ease-in-out",
+            "params": {
+              "rotation": 360
+            }
+          },
+          "sound": {
+            "enabled": true,
+            "file": "sounds/spin.mp3",
+            "volume": 0.7
+          },
+          "feedback": {
+            "visual": true,
+            "audio": true,
+            "haptic": false,
+            "message": "转圈圈!"
+          },
+          "params": {
+            "rotation": 360
+          },
+          "enabled": true
+        },
+        {
+          "name": "hover_glow",
+          "trigger": "hover",
+          "action": "glowEffect",
+          "effect": {
+            "type": "glow",
+            "duration": 300,
+            "easing": "ease-in-out",
+            "params": {
+              "color": "rgba(255, 255, 255, 0.8)"
+            }
+          },
+          "sound": {
+            "enabled": false,
+            "file": null,
+            "volume": 1.0
+          },
+          "feedback": {
+            "visual": true,
+            "audio": false,
+            "haptic": false,
+            "message": "你在看我吗?"
+          },
+          "params": {},
+          "enabled": true
+        },
+        {
+          "name": "rightclick_shake",
+          "trigger": "contextmenu",
+          "action": "shake",
+          "effect": {
+            "type": "shake",
+            "duration": 500,
+            "easing": "ease-in-out",
+            "params": {}
+          },
+          "sound": {
+            "enabled": true,
+            "file": "sounds/shake.mp3",
+            "volume": 0.5
+          },
+          "feedback": {
+            "visual": true,
+            "audio": true,
+            "haptic": false,
+            "message": "不要戳我!"
+          },
+          "params": {},
+          "enabled": true
+        }
+      ]
+    },
+    "interactive": {
+      "name": "完整互动",
+      "description": "包含所有互动类型的完整方案",
+      "interactions": [
+        {
+          "name": "click_bounce",
+          "trigger": "click",
+          "action": "bounce",
+          "effect": {
+            "type": "bounce",
+            "duration": 400,
+            "easing": "ease-out",
+            "params": {}
+          },
+          "sound": {
+            "enabled": true,
+            "file": "sounds/click.mp3",
+            "volume": 0.5
+          },
+          "feedback": {
+            "visual": true,
+            "audio": true,
+            "haptic": false,
+            "message": "点击!"
+          },
+          "params": {},
+          "enabled": true
+        },
+        {
+          "name": "doubleclick_fullscreen",
+          "trigger": "dblclick",
+          "action": "toggleFullscreen",
+          "effect": {
+            "type": "scale",
+            "duration": 500,
+            "easing": "ease-in-out",
+            "params": {
+              "scale": 2.0
+            }
+          },
+          "sound": {
+            "enabled": true,
+            "file": "sounds/expand.mp3",
+            "volume": 0.6
+          },
+          "feedback": {
+            "visual": true,
+            "audio": true,
+            "haptic": false,
+            "message": "变大了!"
+          },
+          "params": {},
+          "enabled": true
+        },
+        {
+          "name": "drag_move",
+          "trigger": "drag",
+          "action": "movePosition",
+          "effect": {
+            "type": "none",
+            "duration": 0,
+            "easing": "linear",
+            "params": {}
+          },
+          "sound": {
+            "enabled": false,
+            "file": null,
+            "volume": 1.0
+          },
+          "feedback": {
+            "visual": false,
+            "audio": false,
+            "haptic": false,
+            "message": null
+          },
+          "params": {},
+          "enabled": true
+        },
+        {
+          "name": "hover_glow",
+          "trigger": "hover",
+          "action": "glowEffect",
+          "effect": {
+            "type": "glow",
+            "duration": 300,
+            "easing": "ease-in-out",
+            "params": {
+              "color": "rgba(255, 255, 255, 0.8)"
+            }
+          },
+          "sound": {
+            "enabled": false,
+            "file": null,
+            "volume": 1.0
+          },
+          "feedback": {
+            "visual": true,
+            "audio": false,
+            "haptic": false,
+            "message": "注意到我了吗?"
+          },
+          "params": {},
+          "enabled": true
+        },
+        {
+          "name": "rightclick_menu",
+          "trigger": "contextmenu",
+          "action": "showMenu",
+          "effect": {
+            "type": "none",
+            "duration": 0,
+            "easing": "linear",
+            "params": {}
+          },
+          "sound": {
+            "enabled": true,
+            "file": "sounds/menu.mp3",
+            "volume": 0.4
+          },
+          "feedback": {
+            "visual": true,
+            "audio": true,
+            "haptic": false,
+            "message": "菜单"
+          },
+          "params": {
+            "menu": [
+              "隐藏",
+              "设置",
+              "更换皮肤",
+              "退出"
+            ]
+          },
+          "enabled": true
+        },
+        {
+          "name": "longpress_sleep",
+          "trigger": "longpress",
+          "action": "sleepMode",
+          "effect": {
+            "type": "fade",
+            "duration": 800,
+            "easing": "ease-in",
+            "params": {
+              "opacity": 0.3
+            }
+          },
+          "sound": {
+            "enabled": true,
+            "file": "sounds/sleep.mp3",
+            "volume": 0.3
+          },
+          "feedback": {
+            "visual": true,
+            "audio": true,
+            "haptic": false,
+            "message": "晚安..."
+          },
+          "params": {},
+          "enabled": true
+        }
+      ]
+    },
+    "minimal": {
+      "name": "极简互动",
+      "description": "最少的互动，适合简洁风格",
+      "interactions": [
+        {
+          "name": "drag_move",
+          "trigger": "drag",
+          "action": "movePosition",
+          "effect": {
+            "type": "none",
+            "duration": 0,
+            "easing": "linear",
+            "params": {}
+          },
+          "sound": {
+            "enabled": false,
+            "file": null,
+            "volume": 1.0
+          },
+          "feedback": {
+            "visual": false,
+            "audio": false,
+            "haptic": false,
+            "message": null
+          },
+          "params": {},
+          "enabled": true
+        },
+        {
+          "name": "rightclick_menu",
+          "trigger": "contextmenu",
+          "action": "showMenu",
+          "effect": {
+            "type": "none",
+            "duration": 0,
+            "easing": "linear",
+            "params": {}
+          },
+          "sound": {
+            "enabled": false,
+            "file": null,
+            "volume": 1.0
+          },
+          "feedback": {
+            "visual": true,
+            "audio": false,
+            "haptic": false,
+            "message": null
+          },
+          "params": {
+            "menu": [
+              "隐藏",
+              "退出"
+            ]
+          },
+          "enabled": true
+        }
+      ]
+    },
+    "talkative": {
+      "name": "话痨互动",
+      "description": "每个互动都有文字反馈",
+      "interactions": [
+        {
+          "name": "click_talk",
+          "trigger": "click",
+          "action": "showText",
+          "effect": {
+            "type": "pulse",
+            "duration": 300,
+            "easing": "ease-out",
+            "params": {}
+          },
+          "sound": {
+            "enabled": true,
+            "file": "sounds/talk.mp3",
+            "volume": 0.6
+          },
+          "feedback": {
+            "visual": true,
+            "audio": true,
+            "haptic": false,
+            "message": "你好呀!"
+          },
+          "params": {
+            "text": "你好呀!",
+            "duration": 2000
+          },
+          "enabled": true
+        },
+        {
+          "name": "doubleclick_talk",
+          "trigger": "dblclick",
+          "action": "showText",
+          "effect": {
+            "type": "bounce",
+            "duration": 400,
+            "easing": "ease-out",
+            "params": {}
+          },
+          "sound": {
+            "enabled": true,
+            "file": "sounds/excited.mp3",
+            "volume": 0.7
+          },
+          "feedback": {
+            "visual": true,
+            "audio": true,
+            "haptic": false,
+            "message": "哇!双击!"
+          },
+          "params": {
+            "text": "我好开心!",
+            "duration": 2500
+          },
+          "enabled": true
+        },
+        {
+          "name": "hover_talk",
+          "trigger": "hover",
+          "action": "showText",
+          "effect": {
+            "type": "glow",
+            "duration": 300,
+            "easing": "ease-in-out",
+            "params": {}
+          },
+          "sound": {
+            "enabled": false,
+            "file": null,
+            "volume": 1.0
+          },
+          "feedback": {
+            "visual": true,
+            "audio": false,
+            "haptic": false,
+            "message": "看什么看?"
+          },
+          "params": {
+            "text": "看什么看?",
+            "duration": 1500
+          },
+          "enabled": true
+        },
+        {
+          "name": "longpress_talk",
+          "trigger": "longpress",
+          "action": "showText",
+          "effect": {
+            "type": "fade",
+            "duration": 600,
+            "easing": "ease-in",
+            "params": {}
+          },
+          "sound": {
+            "enabled": true,
+            "file": "sounds/yawn.mp3",
+            "volume": 0.4
+          },
+          "feedback": {
+            "visual": true,
+            "audio": true,
+            "haptic": false,
+            "message": "好困..."
+          },
+          "params": {
+            "text": "让我睡一会儿...",
+            "duration": 3000
+          },
+          "enabled": true
+        }
+      ]
+    },
+    "soundful": {
+      "name": "声音互动",
+      "description": "强调声音反馈的互动方案",
+      "interactions": [
+        {
+          "name": "click_sound",
+          "trigger": "click",
+          "action": "playSound",
+          "effect": {
+            "type": "pulse",
+            "duration": 200,
+            "easing": "ease-out",
+            "params": {}
+          },
+          "sound": {
+            "enabled": true,
+            "file": "sounds/click1.mp3",
+            "volume": 0.8
+          },
+          "feedback": {
+            "visual": true,
+            "audio": true,
+            "haptic": false,
+            "message": null
+          },
+          "params": {
+            "soundFile": "sounds/click1.mp3",
+            "volume": 0.8
+          },
+          "enabled": true
+        },
+        {
+          "name": "doubleclick_sound",
+          "trigger": "dblclick",
+          "action": "playSound",
+          "effect": {
+            "type": "bounce",
+            "duration": 400,
+            "easing": "ease-out",
+            "params": {}
+          },
+          "sound": {
+            "enabled": true,
+            "file": "sounds/doubleclick.mp3",
+            "volume": 0.9
+          },
+          "feedback": {
+            "visual": true,
+            "audio": true,
+            "haptic": false,
+            "message": null
+          },
+          "params": {
+            "soundFile": "sounds/doubleclick.mp3",
+            "volume": 0.9
+          },
+          "enabled": true
+        },
+        {
+          "name": "hover_sound",
+          "trigger": "hover",
+          "action": "playSound",
+          "effect": {
+            "type": "glow",
+            "duration": 250,
+            "easing": "ease-in-out",
+            "params": {}
+          },
+          "sound": {
+            "enabled": true,
+            "file": "sounds/hover.mp3",
+            "volume": 0.5
+          },
+          "feedback": {
+            "visual": true,
+            "audio": true,
+            "haptic": false,
+            "message": null
+          },
+          "params": {
+            "soundFile": "sounds/hover.mp3",
+            "volume": 0.5
+          },
+          "enabled": true
+        }
+      ]
+    },
+    "custom": {
+      "name": "自定义互动",
+      "description": "空白模板，用于自定义配置",
+      "interactions": []
+    }
+  },
+  "interaction_templates": {
+    "click": [
+      {
+        "name": "点击 - 弹跳",
+        "action": "bounce",
+        "effect": "bounce",
+        "sound": "sounds/click.mp3"
+      },
+      {
+        "name": "点击 - 显示文字",
+        "action": "showText",
+        "effect": "pulse",
+        "sound": "sounds/talk.mp3"
+      },
+      {
+        "name": "点击 - 切换动画",
+        "action": "changeAnimation",
+        "effect": "fade",
+        "sound": null
+      },
+      {
+        "name": "点击 - 播放声音",
+        "action": "playSound",
+        "effect": "pulse",
+        "sound": "sounds/click.mp3"
+      }
+    ],
+    "dblclick": [
+      {
+        "name": "双击 - 全屏切换",
+        "action": "toggleFullscreen",
+        "effect": "scale",
+        "sound": "sounds/expand.mp3"
+      },
+      {
+        "name": "双击 - 旋转",
+        "action": "spin",
+        "effect": "rotate",
+        "sound": "sounds/spin.mp3"
+      },
+      {
+        "name": "双击 - 更换皮肤",
+        "action": "changeSkin",
+        "effect": "fade",
+        "sound": "sounds/change.mp3"
+      }
+    ],
+    "hover": [
+      {
+        "name": "悬停 - 发光",
+        "action": "glowEffect",
+        "effect": "glow",
+        "sound": null
+      },
+      {
+        "name": "悬停 - 显示提示",
+        "action": "showTooltip",
+        "effect": "fade",
+        "sound": null
+      },
+      {
+        "name": "悬停 - 显示文字",
+        "action": "showText",
+        "effect": "pulse",
+        "sound": null
+      }
+    ],
+    "drag": [
+      {
+        "name": "拖拽 - 移动位置",
+        "action": "movePosition",
+        "effect": "none",
+        "sound": null
+      }
+    ],
+    "contextmenu": [
+      {
+        "name": "右键 - 显示菜单",
+        "action": "showMenu",
+        "effect": "none",
+        "sound": "sounds/menu.mp3"
+      },
+      {
+        "name": "右键 - 摇晃",
+        "action": "shake",
+        "effect": "shake",
+        "sound": "sounds/shake.mp3"
+      }
+    ],
+    "longpress": [
+      {
+        "name": "长按 - 睡眠模式",
+        "action": "sleepMode",
+        "effect": "fade",
+        "sound": "sounds/sleep.mp3"
+      },
+      {
+        "name": "长按 - 显示菜单",
+        "action": "showMenu",
+        "effect": "none",
+        "sound": "sounds/menu.mp3"
+      }
+    ]
+  },
+  "sound_library": {
+    "click": [
+      "sounds/click.mp3",
+      "sounds/click1.mp3",
+      "sounds/click2.mp3",
+      "sounds/pop.mp3"
+    ],
+    "talk": [
+      "sounds/talk.mp3",
+      "sounds/speak.mp3",
+      "sounds/voice.mp3"
+    ],
+    "action": [
+      "sounds/spin.mp3",
+      "sounds/bounce.mp3",
+      "sounds/shake.mp3",
+      "sounds/expand.mp3"
+    ],
+    "ambient": [
+      "sounds/sleep.mp3",
+      "sounds/yawn.mp3",
+      "sounds/purr.mp3"
+    ],
+    "ui": [
+      "sounds/menu.mp3",
+      "sounds/hover.mp3",
+      "sounds/select.mp3"
+    ]
+  }
+}

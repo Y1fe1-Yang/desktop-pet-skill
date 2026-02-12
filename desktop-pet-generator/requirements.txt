@@ -1,0 +1,13 @@
+# Python dependencies for Desktop Pet Generator
+
+# Image processing
+Pillow>=10.0.0
+
+# Numerical operations
+numpy>=1.24.0
+
+# Optional: Advanced image analysis
+# opencv-python>=4.8.0
+
+# Optional: Color extraction
+# colorthief>=0.2.1

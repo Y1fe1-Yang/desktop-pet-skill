@@ -1,0 +1,382 @@
+/**
+ * Desktop Pet Animation Templates
+ * Complete CSS @keyframes definitions for all preset animations
+ */
+
+/* ========== BASIC ANIMATIONS ========== */
+
+/* Idle - 轻微晃动 */
+@keyframes idle-bounce {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-5px) scale(1.02);
+  }
+}
+
+.pet-anim-idle {
+  animation: idle-bounce 3s ease-in-out infinite;
+}
+
+/* ========== STATUS ANIMATIONS ========== */
+
+/* Working - 工作中跳动 */
+@keyframes working-pulse {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    transform: scale(1.1) rotate(-5deg);
+  }
+  50% {
+    transform: scale(1.05) rotate(0deg);
+  }
+  75% {
+    transform: scale(1.1) rotate(5deg);
+  }
+}
+
+.pet-anim-working {
+  animation: working-pulse 1.5s ease-in-out infinite;
+}
+
+/* Completed - 完成庆祝 */
+@keyframes completed-celebrate {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-30px) rotate(-15deg) scale(1.2);
+  }
+  50% {
+    transform: translateY(-40px) rotate(15deg) scale(1.3);
+  }
+  75% {
+    transform: translateY(-20px) rotate(-10deg) scale(1.15);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+}
+
+.pet-anim-completed {
+  animation: completed-celebrate 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 2;
+}
+
+/* Error - 错误抖动 */
+@keyframes error-shake {
+  0%, 100% {
+    transform: translateX(0);
+    filter: hue-rotate(0deg);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+    filter: hue-rotate(180deg);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+    filter: hue-rotate(180deg);
+  }
+}
+
+.pet-anim-error {
+  animation: error-shake 0.5s ease-in-out 3;
+}
+
+/* ========== INTERACTION ANIMATIONS ========== */
+
+/* Click - 点击缩放 */
+@keyframes click-scale {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.3) rotate(10deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.pet-anim-click {
+  animation: click-scale 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Hover - 悬停漂浮 */
+@keyframes hover-float {
+  0%, 100% {
+    transform: translateY(0);
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.2));
+  }
+  50% {
+    transform: translateY(-10px);
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+  }
+}
+
+.pet-anim-hover {
+  animation: hover-float 2s ease-in-out infinite;
+}
+
+/* Drag - 拖拽倾斜 */
+@keyframes drag-tilt {
+  0%, 100% {
+    transform: rotate(-5deg) scale(0.95);
+  }
+  50% {
+    transform: rotate(5deg) scale(0.95);
+  }
+}
+
+.pet-anim-drag {
+  animation: drag-tilt 0.2s ease-out infinite;
+  cursor: grabbing !important;
+}
+
+/* ========== MOOD ANIMATIONS ========== */
+
+/* Sleep - 睡眠呼吸 */
+@keyframes sleep-breathe {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.85;
+  }
+}
+
+.pet-anim-sleep {
+  animation: sleep-breathe 4s ease-in-out infinite;
+  filter: blur(1px);
+}
+
+/* Excited - 兴奋跳动 */
+@keyframes excited-bounce {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  25% {
+    transform: translateY(-20px) scale(1.1);
+  }
+  50% {
+    transform: translateY(-30px) scale(1.15);
+  }
+  75% {
+    transform: translateY(-15px) scale(1.08);
+  }
+}
+
+.pet-anim-excited {
+  animation: excited-bounce 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+}
+
+/* Thinking - 思考旋转 */
+@keyframes thinking-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.pet-anim-thinking {
+  animation: thinking-rotate 3s linear infinite;
+}
+
+/* ========== GREETING ANIMATIONS ========== */
+
+/* Wave - 摇摆挥手 */
+@keyframes wave-swing {
+  0%, 100% {
+    transform: rotate(0deg);
+    transform-origin: bottom center;
+  }
+  25% {
+    transform: rotate(15deg);
+  }
+  75% {
+    transform: rotate(-15deg);
+  }
+}
+
+.pet-anim-wave {
+  animation: wave-swing 1s ease-in-out 3;
+}
+
+/* ========== FUN ANIMATIONS ========== */
+
+/* Spin - 360度旋转 */
+@keyframes spin-360 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.pet-anim-spin {
+  animation: spin-360 1s ease-in-out;
+}
+
+/* Wiggle - 扭动 */
+@keyframes wiggle-shake {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg) translateX(-5px);
+  }
+  50% {
+    transform: rotate(10deg) translateX(5px);
+  }
+  75% {
+    transform: rotate(-5deg) translateX(-2px);
+  }
+}
+
+.pet-anim-wiggle {
+  animation: wiggle-shake 0.8s ease-in-out 2;
+}
+
+/* Heartbeat - 心跳 */
+@keyframes heartbeat-pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(1.15);
+  }
+  20% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.15);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+.pet-anim-heartbeat {
+  animation: heartbeat-pulse 1.5s ease-in-out infinite;
+}
+
+/* ========== UTILITY CLASSES ========== */
+
+/* 禁用动画 */
+.pet-anim-none {
+  animation: none !important;
+}
+
+/* 暂停动画 */
+.pet-anim-paused {
+  animation-play-state: paused !important;
+}
+
+/* 动画速度修改器 */
+.pet-anim-slow {
+  animation-duration: calc(var(--animation-duration, 1s) * 2) !important;
+}
+
+.pet-anim-fast {
+  animation-duration: calc(var(--animation-duration, 1s) * 0.5) !important;
+}
+
+/* 动画延迟 */
+.pet-anim-delay-1 {
+  animation-delay: 0.5s;
+}
+
+.pet-anim-delay-2 {
+  animation-delay: 1s;
+}
+
+.pet-anim-delay-3 {
+  animation-delay: 1.5s;
+}
+
+/* ========== COMBINATION EFFECTS ========== */
+
+/* 发光效果（可与任何动画组合） */
+.pet-effect-glow {
+  filter: drop-shadow(0 0 10px currentColor);
+}
+
+/* 模糊效果 */
+.pet-effect-blur {
+  filter: blur(2px);
+}
+
+/* 透明度变化 */
+.pet-effect-fade {
+  animation: fade-pulse 2s ease-in-out infinite;
+}
+
+@keyframes fade-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* 彩虹色变化 */
+.pet-effect-rainbow {
+  animation: rainbow-hue 3s linear infinite;
+}
+
+@keyframes rainbow-hue {
+  0%, 100% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(180deg);
+  }
+}
+
+/* ========== RESPONSIVE ADJUSTMENTS ========== */
+
+/* 减少运动效果（尊重用户偏好） */
+@media (prefers-reduced-motion: reduce) {
+  .pet-anim-idle,
+  .pet-anim-working,
+  .pet-anim-hover,
+  .pet-anim-sleep,
+  .pet-anim-thinking {
+    animation: none;
+  }
+
+  .pet-anim-completed,
+  .pet-anim-error,
+  .pet-anim-click,
+  .pet-anim-wave,
+  .pet-anim-spin,
+  .pet-anim-wiggle,
+  .pet-anim-excited,
+  .pet-anim-heartbeat {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+/* 小屏幕调整 */
+@media (max-width: 768px) {
+  [class*="pet-anim-"] {
+    animation-duration: calc(var(--animation-duration, 1s) * 0.8);
+  }
+}
